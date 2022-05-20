@@ -261,6 +261,8 @@ static const char *amixerUp[]  = { "amixer", "set", "Master", "10%+", NULL };
 static const char *amixerDown[]  = { "amixer", "set", "Master", "10%-", NULL };
 static const char *amixer[]  = { "amixer", "set", "Master", "toggle", NULL };
 static const char *ranger[]  = { "alacritty", "-e", "ranger", NULL };
+static const char *neovim[]  = { "alacritty", "-e", "nvim", NULL };
+
 static Key keys[] = {
 	/* modifier                     key            function                argument */
 
@@ -274,6 +276,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_s,      spawn,          {.v = sunloginclient } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = i3lock } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = ranger } },
+	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = neovim } },
 	{ MODKEY,                       XK_F12,      spawn,          {.v = amixerUp } },
 	{ MODKEY,                       XK_F11,      spawn,          {.v = amixerDown } },
 	{ MODKEY,                       XK_F10,      spawn,          {.v = amixer } },
