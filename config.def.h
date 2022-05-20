@@ -105,7 +105,7 @@ static char *colors[][ColCount] = {
 
 
 //const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
-const char *spcmd1[] = {"alacritty", "--class", "spterm", "-o", "window.dimensions.columns=120", "-o", "window.dimensions.lines=34", NULL };
+const char *spcmd1[] = {"alacritty", "--class", "spterm", "-o", "window.dimensions.columns=92", "-o", "window.dimensions.lines=28", NULL };
 static Sp scratchpads[] = {
    /* name          cmd  */
    {"spterm",      spcmd1},
@@ -257,7 +257,6 @@ static const char *ip[]  = { "/home/cen/Documents/bashs/ip.sh", NULL };
 static const char *sunloginclient[]  = { "sunloginclient", NULL };
 static const char *i3lock[]  = { "i3lock-fancy", NULL };
 static const char *rofi[]  = { "rofi", "-combi-modi", "drun", "-show", "combi", "-icon-theme", "Papirus", "-show-icons", NULL };
-static const char *code[]  = { "code", NULL };
 static const char *amixerUp[]  = { "amixer", "set", "Master", "10%+", NULL };
 static const char *amixerDown[]  = { "amixer", "set", "Master", "10%-", NULL };
 static const char *amixer[]  = { "amixer", "set", "Master", "toggle", NULL };
@@ -274,7 +273,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_q,      spawn,          {.v = ip } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = sunloginclient } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = i3lock } },
-	{ MODKEY,                       XK_e,      spawn,          {.v = code } },
+	{ MODKEY,                       XK_e,      spawn,          {.v = ranger } },
 	{ MODKEY,                       XK_F12,      spawn,          {.v = amixerUp } },
 	{ MODKEY,                       XK_F11,      spawn,          {.v = amixerDown } },
 	{ MODKEY,                       XK_F10,      spawn,          {.v = amixer } },
